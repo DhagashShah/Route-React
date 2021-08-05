@@ -1,8 +1,11 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, Route } from "react-router-dom"
+import Product from "../pages/Product"
+import ProductDetail from "../pages/ProductDetail"
 export default function Header() {
     return (
         <div>
+
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">Routing-Demo</a>
@@ -15,16 +18,18 @@ export default function Header() {
                                 <Link className="nav-link active" aria-current="page" to="/welcome">Welcome</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/product">Product</Link>
+                                <Link className="nav-link" to="/header/product">Product</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/product-detail">Product Detail</Link>
-                            </li>
-                            
                         </ul>
                     </div>
                 </div>
             </nav>
+            <Route path="/header/product" >
+                <Product />
+            </Route>
+            {/* <Route path="/header/product/:id">
+                <ProductDetail />
+            </Route> */}
         </div>
     )
 }

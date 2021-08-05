@@ -7,6 +7,7 @@ const ProductDetail = () => {
         <div>
             Product Detail Works...!!
             <p>{params.id}</p>
+
         </div>
     )
 }
